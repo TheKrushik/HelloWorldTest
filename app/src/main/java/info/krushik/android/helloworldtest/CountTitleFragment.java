@@ -12,8 +12,6 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import info.krushik.android.helloworldtest.util.Const;
-
 
 public class CountTitleFragment extends Fragment {
 

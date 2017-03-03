@@ -1,6 +1,7 @@
 package info.krushik.android.helloworldtest;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -22,7 +23,6 @@ import com.github.javiersantos.appupdater.enums.UpdateFrom;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
 
 
     @Override
@@ -81,24 +81,24 @@ public class MainActivity extends AppCompatActivity
                 .start();
     }
 
-    public void onUpdate(View view){
+    public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
                 upDate();
                 break;
-        }
-    }
-
-    public void showFragment(View view){
-        switch (view.getId()) {
             case R.id.button2:
                 CountTitleFragment fragment = new CountTitleFragment();
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.container, fragment);
                 fragmentTransaction.commit();
                 break;
+            case R.id.btnBiling:
+                Intent intentBiling = new Intent(this, InAppBillingActivity.class);
+                startActivity(intentBiling);
+                break;
         }
     }
+
 
     @Override
     public void onBackPressed() {

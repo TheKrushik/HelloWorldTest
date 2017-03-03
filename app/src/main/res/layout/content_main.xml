@@ -14,40 +14,51 @@
     tools:showIn="@layout/app_bar_main">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World! v1.1 (При запуске должно отобразится окно 5 раз)"
-        android:id="@+id/textView2" />
+        android:text="Hello World! v1.1 (При запуске должно отобразится окно 5 раз)" />
 
     <Button
-        android:text="Show dialog (update)"
-        android:onClick="onUpdate"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
         android:layout_marginLeft="21dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="25dp"
-        android:id="@+id/button"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:onClick="onClick"
+        android:text="Show dialog (update)" />
 
     <Button
-        android:text="Открыть счетчик"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:onClick="showFragment"
-        android:layout_below="@+id/button"
         android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_alignStart="@+id/button"
+        android:layout_below="@+id/button"
+        android:onClick="onClick"
+        android:text="Открыть счетчик" />
+
+    <Button
+        android:id="@+id/btnBiling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:onClick="onClick"
+        android:text="Biling" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:layout_below="@+id/button2"
         android:background="?attr/colorButtonNormal">
 

@@ -1,4 +1,4 @@
-package info.krushik.android.helloworldtest.util;
+package info.krushik.android.helloworldtest;
 
 
 public class Const {
